@@ -353,7 +353,7 @@
 
 \title{Steem Handbook}
 \author{Steem 中文社区集体创作}
-\date{2019-04-17}
+\date{2019-04-18}
 
 \begin{document}
 %\maketitle
@@ -6335,13 +6335,18 @@ https://mentions.steemdata.com/find?q=steemr
 
 本节为Steem Keychain的简介和操作指南
 
-Steem上的登录方式有3种：
+\hypertarget{steem3}{%
+\subsubsection{Steem上的登录方式有3种：}\label{steem3}}
 
-直接输入密码登录，比如登录steemit.com
-
-通过第三方应用steemconnect授权登录,比如登录busy.org,partiko,tasteem,dclick 等DApps
-
-通过浏览器插件Steem Keychain登录
+\begin{itemize}
+\tightlist
+\item
+  直接输入密码登录，比如登录steemit.com
+\item
+  通过第三方应用steemconnect授权登录,比如登录busy.org,partiko,tasteem,dclick 等DApps
+\item
+  通过浏览器插件Steem Keychain登录
+\end{itemize}
 
 直接输入密码登录的方式简单粗暴，但是这种登录方式的缺点是，如果你不小心登录一个钓鱼网站，页面和steemit一模一样，你的密码就会被记录下来。
 
@@ -6349,101 +6354,186 @@ Steem上的登录方式有3种：
 
 但是也有缺点，就是如果steemconnect被黑了，大家通过steemconnect授权登入的帐号密码将会被盗走。而且在未来，steemconnect将收取一点费用。
 
-所以第三种登录方式出现了，这就是\textbf{Steem Keychain}
-
-如果你知道ETH的MetaMask 或者EOS的Scatter，理解Steem Keychain也就容易多了。
+所以第三种登录方式出现了，这就是Steem Keychain 如果你知道ETH的MetaMask 或者EOS的Scatter，理解Steem Keychain也就容易多了。
 
 Steem Keychain是基于Chrome/Brave/Safari的插件，他会把你的帐号密码加密，只在你需要的时候给你需要的数据。
 
-目前支持Steem Keychain登入的DApps有：
+\hypertarget{steem-keychaindapps}{%
+\subsubsection{目前支持Steem Keychain登入的DApps有：}\label{steem-keychaindapps}}
 
-steemmonsters
+\begin{itemize}
+\tightlist
+\item
+  steemmonsters
+\item
+  steempeak.com
+\item
+  dtube
+\item
+  magic-dice
+\item
+  epicdice
+\item
+  steemworld.org
+\item
+  steem-engine.com
+\item
+  Steeve
+\item
+  drugwars
+\item
+  smartsteem
+\item
+  minnowbooster
+\item
+  Token BB
+\item
+  等等
+\end{itemize}
 
-steempeak.com
+\hypertarget{steem-keychain}{%
+\subsubsection{Steem Keychain未来计划：}\label{steem-keychain}}
 
-dtube
+\begin{itemize}
+\tightlist
+\item
+  支持 Safari, Opera, 和 Microsoft Edge 浏览器
+\item
+  支持通过Steem Ninja和blacktrades创建新号
+\item
+  支持通过插件Claim accounts和创建新号
+\end{itemize}
 
-magic-dice
+\hypertarget{steem-keychain}{%
+\subsubsection{为什么要Steem Keychain？}\label{steem-keychain}}
 
-epicdice
+\begin{itemize}
+\tightlist
+\item
+  首先他安全，不会把你的密码交给第三方托管
+\item
+  其次就是steemconnect将要收费了，使用steemconnect的api发帖/回复的将收取2.5\%
+\item
+  功能强大，可以转账，代理SP，投票给见证人，power up/down, 查看/转账Steem-engine上的代币等等，他就是一个百宝箱。
+\end{itemize}
 
-steemworld.org
+\hypertarget{steem-keychain}{%
+\subsubsection{怎么安装Steem Keychain？}\label{steem-keychain}}
 
-steem-engine.com
+\begin{itemize}
+\tightlist
+\item
+  安装keychain插件。目前支持Steem Keychain插件的浏览器有：
+\end{itemize}
 
-Steeve
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Chrome： 插件链接：\url{https://chrome.google.com/webstore/detail/steem-keychain/lkcjlnjfpbikmcmbachjpdbijejflpcm} ，点击就可以安装
+\item
+  Brave： 复制上面chrome版本插件的链接到Brave上就可以安装。
+\item
+  Firefox： 插件链接 \url{https://addons.mozilla.org/en-US/firefox/addon/steem-keychain/}
+\end{enumerate}
 
-drugwars
+\begin{itemize}
+\tightlist
+\item
+  安装成功后，点击Steem Keychain插件，会要求你输入密码。（不是你Steem帐号的密码，而是你要解锁Steem Keychain的密码）
+\item
+  设置好密码后，会出现下面这样的页面。输入你的Steem帐号，和私密密码（可以是发帖密钥或者活动密钥，为了安全，不要用万能密钥）
+\end{itemize}
 
-smartsteem
+\includegraphics{images/chapter_08_0/keychain2.jpg}
 
-minnowbooster
+\begin{itemize}
+\tightlist
+\item
+  添加好帐号和发帖密钥（用于登录dapp)后，就可以用Steem Keychain登入DApps了。
+\end{itemize}
 
-Token BB
+\hypertarget{steem-keychaindapp}{%
+\subsubsection{怎么用Steem Keychain登录Dapp?}\label{steem-keychaindapp}}
 
-等等
+\begin{itemize}
+\item
+  前往支持Steem Keychain的网站，比如：www.steempeak.com
+\item
+  点击右上角的 ''Login``
+\item
+  按照提示输入用户名，然后点击 ``Login'' \includegraphics{images/chapter_08_0/1-2.png}
+\item
+  会提示是否授权登录，点击确定就登录成功
+\end{itemize}
 
-Steem Keychain未来计划：
+\hypertarget{steem-keychain}{%
+\subsubsection{Steem Keychain的其他功能（需要添加发帖密钥）}\label{steem-keychain}}
 
-支持 Safari, Opera, 和 Microsoft Edge 浏览器
+\begin{itemize}
+\tightlist
+\item
+  Steem Keychain除了登入功能，还可以直接通过插件转账：
+\end{itemize}
 
-支持通过Steem Ninja和blacktrades创建新号
+\includegraphics{images/chapter_08_0/keychain4.jpg}
 
-支持通过插件Claim accounts和创建新号
+\begin{itemize}
+\tightlist
+\item
+  查看转账记录：
+\end{itemize}
 
-为什么要Steem Keychain？
+\includegraphics{images/chapter_08_0/keychain5.jpg}
 
-首先他安全，不会把你的密码交给第三方托管
+\begin{itemize}
+\tightlist
+\item
+  SP代理：
+\end{itemize}
 
-其次就是steemconnect将要收费了，使用steemconnect的api发帖/回复的将收取2.5\%
+\includegraphics{images/chapter_08_0/keychain6.jpg}
 
-功能强大，可以转账，代理SP，投票给见证人，power up/down, 查看/转账Steem-engine上的代币等等，他就是一个百宝箱。
+\begin{itemize}
+\tightlist
+\item
+  Power Up：
+\end{itemize}
 
-怎么安装Steem Keychain？
+\includegraphics{images/chapter_08_0/keychain7.jpg}
 
-安装keychain插件。目前支持Steem Keychain插件的浏览器有：
+\begin{itemize}
+\tightlist
+\item
+  给见证人投票：
+\end{itemize}
 
-Chrome： 插件链接：\url{https://chrome.google.com/webstore/detail/steem-keychain/lkcjlnjfpbikmcmbachjpdbijejflpcm} ，点击就可以安装
+\includegraphics{images/chapter_08_0/keychain8.jpg}
 
-Brave： 复制上面chrome版本插件的链接到Brave上就可以安装。
+\begin{itemize}
+\item
+  直接通过Steem Keychain领取奖励 \includegraphics{images/chapter_08_0/2-1.png}
+\item
+  查看自己在Steem-engine上的代币
+\end{itemize}
 
-Firefox： 插件链接 \url{https://addons.mozilla.org/en-US/firefox/addon/steem-keychain/}
+\includegraphics{images/chapter_08_0/3.png}
 
-安装成功后，点击Steem Keychain插件，会要求你输入密码。（不是你Steem帐号的密码，而是你要解锁Steem Keychain的密码）
+\begin{itemize}
+\tightlist
+\item
+  直接通过keychain查看代币进账转账记录
+\end{itemize}
 
-设置好密码后，会出现下面这样的页面。输入你的Steem帐号，和私密密码（可以是发帖密钥或者活动密钥，为了安全，不要用万能密钥）
+\includegraphics{images/chapter_08_0/4-1.png}
 
-添加好帐号和发帖密钥（用于登录dapp)后，就可以用Steem Keychain登入DApps了。
+\begin{itemize}
+\tightlist
+\item
+  转发代币
+\end{itemize}
 
-怎么用Steem Keychain登录Dapp?
-
-前往支持Steem Keychain的网站，比如：www.steempeak.com
-
-点击右上角的 ''Login``
-
-按照提示输入用户名，然后点击 ``Login''
-
-会提示是否授权登录，点击确定就登录成功
-
-Steem Keychain的其他功能（需要添加发帖密钥）
-
-Steem Keychain除了登入功能，还可以直接通过插件转账：
-
-查看转账记录：
-
-SP代理：
-
-Power Up：
-
-给见证人投票：
-
-直接通过Steem Keychain领取奖励
-
-查看自己在Steem-engine上的代币
-
-直接通过keychain查看代币进账转账记录
-
-转发代币
+\includegraphics{images/chapter_08_0/5-1.png}
 
 还有很多小功能～ 简直就是瑞士军刀！集登入和钱包以一身
 
