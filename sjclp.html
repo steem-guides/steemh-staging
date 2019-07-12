@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>第11章 数据库 | Steem Handbook</title>
   <meta name="description" content="第11章 数据库 | Steem Handbook" />
-  <meta name="generator" content="bookdown 0.11.3 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.12.1 and GitBook 2.6.7" />
 
   <meta property="og:title" content="第11章 数据库 | Steem Handbook" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Steem 中文社区集体创作" />
 
 
-<meta name="date" content="2019-07-08" />
+<meta name="date" content="2019-07-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -104,8 +104,7 @@
 <li class="chapter" data-level="2.2.3" data-path="jbcsp-.html"><a href="jbcsp-.html#spsteem-power"><i class="fa fa-check"></i><b>2.2.3</b> SP(Steem Power)</a></li>
 <li class="chapter" data-level="2.2.4" data-path="jbcsp-.html"><a href="jbcsp-.html#sbdsteem-dollars"><i class="fa fa-check"></i><b>2.2.4</b> SBD(Steem Dollars)</a></li>
 <li class="chapter" data-level="2.2.5" data-path="jbcsp-.html"><a href="jbcsp-.html#section-2.2.5"><i class="fa fa-check"></i><b>2.2.5</b> 怎么获得这些货币</a></li>
-<li class="chapter" data-level="2.2.6" data-path="jbcsp-.html"><a href="jbcsp-.html#how-to-calculate-reward"><i class="fa fa-check"></i><b>2.2.6</b> 帖子收益的计算方式 </a></li>
-<li class="chapter" data-level="2.2.7" data-path="jbcsp-.html"><a href="jbcsp-.html#section-2.2.7"><i class="fa fa-check"></i><b>2.2.7</b> 总结</a></li>
+<li class="chapter" data-level="2.2.6" data-path="jbcsp-.html"><a href="jbcsp-.html#section-2.2.6"><i class="fa fa-check"></i><b>2.2.6</b> 总结</a></li>
 </ul></li>
 <li class="chapter" data-level="2.3" data-path="jbcsp-.html"><a href="jbcsp-.html#about-sp"><i class="fa fa-check"></i><b>2.3</b> 关于SP（steem power）</a><ul>
 <li class="chapter" data-level="2.3.1" data-path="jbcsp-.html"><a href="jbcsp-.html#what-is-sp"><i class="fa fa-check"></i><b>2.3.1</b> 什么是SP代理？ </a></li>
@@ -113,9 +112,12 @@
 <li class="chapter" data-level="2.3.3" data-path="jbcsp-.html"><a href="jbcsp-.html#sp"><i class="fa fa-check"></i><b>2.3.3</b> 代理SP的其他方法 </a></li>
 <li class="chapter" data-level="2.3.4" data-path="jbcsp-.html"><a href="jbcsp-.html#power-up"><i class="fa fa-check"></i><b>2.3.4</b> power up </a></li>
 <li class="chapter" data-level="2.3.5" data-path="jbcsp-.html"><a href="jbcsp-.html#lease-sp"><i class="fa fa-check"></i><b>2.3.5</b> 如何租借SP？ </a></li>
+<li class="chapter" data-level="2.3.6" data-path="jbcsp-.html"><a href="jbcsp-.html#sp"><i class="fa fa-check"></i><b>2.3.6</b> 为什么帐号上的SP数量每天都在增长？</a></li>
 </ul></li>
 <li class="chapter" data-level="2.4" data-path="jbcsp-.html"><a href="jbcsp-.html#section-2.4"><i class="fa fa-check"></i><b>2.4</b> 关于声望的一切</a></li>
-<li class="chapter" data-level="2.5" data-path="jbcsp-.html"><a href="jbcsp-.html#section-2.5"><i class="fa fa-check"></i><b>2.5</b> 关于文章收益的一切 </a></li>
+<li class="chapter" data-level="2.5" data-path="jbcsp-.html"><a href="jbcsp-.html#section-2.5"><i class="fa fa-check"></i><b>2.5</b> 关于文章收益的一切 </a><ul>
+<li class="chapter" data-level="2.5.1" data-path="jbcsp-.html"><a href="jbcsp-.html#how-to-calculate-reward"><i class="fa fa-check"></i><b>2.5.1</b> 帖子收益的计算方式 </a></li>
+</ul></li>
 <li class="chapter" data-level="2.6" data-path="jbcsp-.html"><a href="jbcsp-.html#section-2.6"><i class="fa fa-check"></i><b>2.6</b> 关于带宽的一切 </a></li>
 <li class="chapter" data-level="2.7" data-path="jbcsp-.html"><a href="jbcsp-.html#section-2.7"><i class="fa fa-check"></i><b>2.7</b> 关注、点赞、拉黑、踩灰 </a><ul>
 <li class="chapter" data-level="2.7.1" data-path="jbcsp-.html"><a href="jbcsp-.html#-follow"><i class="fa fa-check"></i><b>2.7.1</b> 关注 Follow</a></li>
@@ -232,8 +234,12 @@
 <li class="chapter" data-level="9.6" data-path="zbwzp-.html"><a href="zbwzp-.html#tasteem---"><i class="fa fa-check"></i><b>9.6</b> Tasteem - 美食分享平台</a></li>
 <li class="chapter" data-level="9.7" data-path="zbwzp-.html"><a href="zbwzp-.html#steemitworldmap"><i class="fa fa-check"></i><b>9.7</b> Steemitworldmap </a></li>
 <li class="chapter" data-level="9.8" data-path="zbwzp-.html"><a href="zbwzp-.html#steem-bounty"><i class="fa fa-check"></i><b>9.8</b> Steem Bounty之投票俱乐部 </a></li>
-<li class="chapter" data-level="9.9" data-path="zbwzp-.html"><a href="zbwzp-.html#section-9.9"><i class="fa fa-check"></i><b>9.9</b> 延伸阅读：授权与安全 </a></li>
-<li class="chapter" data-level="9.10" data-path="zbwzp-.html"><a href="zbwzp-.html#steemsmts"><i class="fa fa-check"></i><b>9.10</b> 延伸阅读：基于Steem区块链SMTs是什么？ </a></li>
+<li class="chapter" data-level="9.9" data-path="zbwzp-.html"><a href="zbwzp-.html#snax"><i class="fa fa-check"></i><b>9.9</b> Snax </a><ul>
+<li class="chapter" data-level="9.9.1" data-path="zbwzp-.html"><a href="zbwzp-.html#snax"><i class="fa fa-check"></i><b>9.9.1</b> 给社交平台用户的一盒糖果（Snax）</a></li>
+<li class="chapter" data-level="9.9.2" data-path="zbwzp-.html"><a href="zbwzp-.html#snax"><i class="fa fa-check"></i><b>9.9.2</b> 有关Snax的体验和奖励指标。</a></li>
+</ul></li>
+<li class="chapter" data-level="9.10" data-path="zbwzp-.html"><a href="zbwzp-.html#section-9.10"><i class="fa fa-check"></i><b>9.10</b> 延伸阅读：授权与安全 </a></li>
+<li class="chapter" data-level="9.11" data-path="zbwzp-.html"><a href="zbwzp-.html#steemsmts"><i class="fa fa-check"></i><b>9.11</b> 延伸阅读：基于Steem区块链SMTs是什么？ </a></li>
 </ul></li>
 <li class="part"><span><b>III 高级篇</b></span></li>
 <li class="chapter" data-level="10" data-path="section-10.html"><a href="section-10.html"><i class="fa fa-check"></i><b>10</b> 区块链 </a><ul>
@@ -279,9 +285,7 @@
 <li class="chapter" data-level="13.4.5" data-path="eckfp.html"><a href="eckfp.html#jrqkldigyys_steemit"><i class="fa fa-check"></i><b>13.4.5</b> 区块链畅想：假如区块链的第一个应用是steemit </a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="bqtz.html"><a href="bqtz.html"><i class="fa fa-check"></i><b>14</b> 币圈投资</a><ul>
-<li class="chapter" data-level="14.1" data-path="bqtz.html"><a href="bqtz.html#nbc-"><i class="fa fa-check"></i><b>14.1</b> NBC 新手币 </a></li>
-</ul></li>
+<li class="chapter" data-level="14" data-path="bqtz.html"><a href="bqtz.html"><i class="fa fa-check"></i><b>14</b> 币圈投资</a></li>
 <li class="chapter" data-level="15" data-path="zt-steem-sj.html"><a href="zt-steem-sj.html"><i class="fa fa-check"></i><b>15</b> 专题：Steem 十讲</a><ul>
 <li class="chapter" data-level="15.1" data-path="zt-steem-sj.html"><a href="zt-steem-sj.html#liu0"><i class="fa fa-check"></i><b>15.1</b> 预告</a></li>
 <li class="chapter" data-level="15.2" data-path="zt-steem-sj.html"><a href="zt-steem-sj.html#liu1"><i class="fa fa-check"></i><b>15.2</b> 第一讲：行为的主体</a></li>

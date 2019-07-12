@@ -353,7 +353,7 @@
 
 \title{Steem Handbook}
 \author{Steem 中文社区集体创作}
-\date{2019-07-08}
+\date{2019-07-12}
 
 \begin{document}
 %\maketitle
@@ -1497,67 +1497,6 @@ SBD初衷是设计来1：1兑换美元的，官方现在也是把1SBD固定视�
 
 作者在发文章之后，按照Steemit的规则，7日后文章将被锁定而且无法修改(区块链永久不可篡改性)，同时进行该帖的结算，并根据作者发帖时的设定进行Steem和SBD的奖励。如果作者选择50\% 50\%，系统会将奖励分为两部分，一部分作为SBD奖励，另一部分作为SP奖励；如果作者选择发帖时power up 100\%，则系统将会将奖励全部按照SP进行power up。当然你也可以通过交易所或其它货币持有者交易来获得这些货币。
 
-\hypertarget{how-to-calculate-reward}{%
-\subsection[帖子收益的计算方式 ]{\texorpdfstring{帖子收益的计算方式 \footnote{作者：@ericet；原文链接：\url{https://steemit.com/cn/@ericet/35f52g}}}{帖子收益的计算方式 }}\label{how-to-calculate-reward}}
-
-帖子计算的公式
-\includegraphics{images/chapter_02_0/image.png}
-
-\includegraphics{images/chapter_02_0/image_1.png}
-
-第一组公式：
-\textbf{RS}: 帖子收益总和，以rshares为单位。
-\textbf{Rb（Reward Balance)}: 每年Steem通货膨胀所产生的STEEM，大概每3秒产生 1.668 STEEM 加到奖金池里
-\textbf{Rc（Recent Claims）}: 所有帖子回复还没有结算的收益总和。以Rshares为单位。
-
-第二组公式：
-\textbf{Psteem}：通过第一组公式得到的以Steem计价的帖子收入
-\textbf{Price} : STEEM的喂价（STEEM 3.5日的中间价）
-
-通过第二组公式就可以获得Psbd 以SBD计的帖子收益。
-
-看到公式是不是很抽象？举个例子解释一下吧。
-
-比如我的这篇帖子：\href{https://steemit.com/@ericet/partiko20-2mmhatnw}{https://steemit.com/\citet{ericet/partiko20-2mmhatnw}}
-显示的收益是\$0.99.
-现在我们开始计算这\$0.99是怎么来的。
-
-\begin{itemize}
-\tightlist
-\item
-  通过\href{https://steemd.com/@ericet/partiko20-2mmhatnw}{https://steemd.com/\citet{ericet/partiko20-2mmhatnw}} 获取帖子点赞的RS，总共：1,644,564,313,801
-\item
-  Rb: 847,366
-\item
-  Rc: 550,688,291B
-\item
-  通过www.steemd.com 获取STEEM喂价：\$0.39 然后套入公式后：
-\end{itemize}
-
-\begin{quote}
-Psbd = RSx(Rb/Rc)xPrice
-\end{quote}
-
-Psbd = 1,644,564,313,801 x (847,366/550,688,291,000,000,000) x 0.39
-Psbd = 0.987
-
-算出的收益为0.987 SBD，1SBD以1美元计，和帖子显示的\$0.99相符（四舍五入）
-
-读懂上面的公式对理解帖子的收益有很大的帮助。
-比如：
-
-\begin{itemize}
-\tightlist
-\item
-  帖子的收益受什么因素影响？
-\item
-  什么时候买赞比较合算？
-\item
-  币价低迷是不是写文章的好时机？
-\end{itemize}
-
-这些问题都可以通过上面的公式来解释。
-
 \subsection{总结}
 
 Steem上的货币是相互依存，息息相关的，新手朋友光看这些文字可能还是不能完全理解。如果你想投资进来我建议可以先投资一小部分自己实际操作一下，完全搞清楚这里面的各种关系后再决定是否大力投资。
@@ -1786,6 +1725,292 @@ SP非常的重要，日常的发帖或者直接购买都可以增加你的SP。�
 
 個人經驗, @minnowbooster人流會多一點, 所以會比較容易租到SP. 但@delegationhub也不是太差的, 偶爾也會有活動可以收到他們贊助的少量SP\textasciitilde{}.
 
+\hypertarget{sp}{%
+\subsection[为什么帐号上的SP数量每天都在增长？]{\texorpdfstring{为什么帐号上的SP数量每天都在增长？\footnote{作者：@ericet；原文链接：\url{https://steemit.com/steempress/@ericet/sp-0nzgkme8l3}}}{为什么帐号上的SP数量每天都在增长？}}\label{sp}}
+
+你有没有发现你STEEM钱包里面SP每天一点点的增加？
+
+想要了解这个问题，先看看白皮书里关于SP部分的解说：
+
+Starting with the network's 16th hard fork in December 2016, Steem began creating new tokens at an
+annual inflation rate of 9.5\%. The inflation rate decreases at a rate of 0.01\% every 250,000 blocks, or
+about 0.5\% per year. The inflation will continue decreasing at this pace until the overall inflation rate
+reaches 0.95\%. This will take about 20.5 years from the time hard fork 16 went into effect.
+Of the new tokens that are generated, 75\% go to fund the reward pool, which is split between authors and
+curators. Another 15\% of the new tokens are awarded to holders of SP. The remaining 10\% pays for the
+witnesses to power the blockchain.
+
+从HF16开始，每年STEEM会通货膨胀产生9.5\%的代币。通货膨胀率以每250，000个区块递减0.01\%（每年大概递减0.5\%）。
+通货膨胀率将持续递减到0.95\%（大概20.5年时间）。
+新产生的代币将有75\%放入奖金池，15\%给予每位SP的持有者，10\%给予见证人。
+
+这是未来30年STEEM的数量，通货膨胀率和每年产生的STEEM的数量。
+
+Year
+
+Supply
+
+Inflation
+
+New Supply
+
+2016
+
+250,000,000
+
+9.50\%
+
+23,750,000
+
+2017
+
+273,750,000
+
+9.08\%
+
+24,854,398
+
+2018
+
+298,604,398
+
+8.66\%
+
+25,854,554
+
+2019
+
+324,458,952
+
+8.24\%
+
+26,727,942
+
+2020
+
+351,186,894
+
+7.82\%
+
+27,452,027
+
+2021
+
+378,638,921
+
+7.40\%
+
+28,004,740
+
+2022
+
+406,643,661
+
+6.98\%
+
+28,364,989
+
+2023
+
+435,008,650
+
+6.55\%
+
+28,513,181
+
+2024
+
+463,521,832
+
+6.13\%
+
+28,431,762
+
+2025
+
+491,953,593
+
+5.71\%
+
+28,105,742
+
+2026
+
+520,059,335
+
+5.29\%
+
+27,523,204
+
+2027
+
+547,582,539
+
+4.87\%
+
+26,675,768
+
+2028
+
+574,258,308
+
+4.45\%
+
+25,558,997
+
+2029
+
+599,817,304
+
+4.03\%
+
+24,172,733
+
+2030
+
+623,990,038
+
+3.61\%
+
+22,521,348
+
+2031
+
+646,511,386
+
+3.19\%
+
+20,613,886
+
+2032
+
+667,125,272
+
+2.77\%
+
+18,464,106
+
+2033
+
+685,589,378
+
+2.35\%
+
+16,090,399
+
+2034
+
+701,679,777
+
+1.93\%
+
+13,515,587
+
+2035
+
+715,195,364
+
+1.51\%
+
+10,766,608
+
+2036
+
+725,961,973
+
+1.08\%
+
+7,874,074
+
+2037
+
+733,836,047
+
+0.95\%
+
+6,971,442
+
+2038
+
+740,807,489
+
+0.95\%
+
+7,037,671
+
+2039
+
+747,845,160
+
+0.95\%
+
+7,104,529
+
+2040
+
+754,949,689
+
+0.95\%
+
+7,172,022
+
+2041
+
+762,121,711
+
+0.95\%
+
+7,240,156
+
+2042
+
+769,361,868
+
+0.95\%
+
+7,308,938
+
+2043
+
+776,670,805
+
+0.95\%
+
+7,378,373
+
+2044
+
+784,049,178
+
+0.95\%
+
+7,448,467
+
+2045
+
+791,497,645
+
+0.95\%
+
+7,519,228
+
+回到这篇帖子的主题，为什么帐号上的SP数量每天都在增长？
+之前说过了，新产生的代币将有75\%放入奖金池，15\%给予每位SP的持有者，10\%给予见证人。
+
+新产生的代币将有15\%给予每位持有者，我们来算算，如果你持有100SP，每天将会获得多少SP?
+
+目前我们大约有324,074,116 STEEM
+通货膨胀率大概8.24\%.
+一年的通货膨胀获得的SP数量：100SP * 0.0824 * 0.15 = 1.236 SP
+一天的通货膨胀获得的SP数量：1.236SP/365 = 0.0034SP
+
+所以你一年啥都不做，SP的数量会自动增长1.236\%
+
+之前就有人嘲笑STEEM的这个机制。
+自己先预挖了100万个代币，然后每年设置5\%的通货膨胀率，什么都不做每年收入5万个代币。
+
+他说的不无道理，但是这不也是普通货币做的事吗？
+
 \section[关于声望的一切]{\texorpdfstring{关于声望的一切\footnote{作者：@vickylin；小故事：@maiyude编辑：@vickylin}}{关于声望的一切}}
 
 小雅来到Steemit已经好几天了，文章也发了好几篇了。虽然点赞的人不多，每篇文章的收益也就零点零几美元，不过小雅也很满足了，因为自己已经慢慢开始熟悉这个社区了。
@@ -1854,7 +2079,7 @@ SP非常的重要，日常的发帖或者直接购买都可以增加你的SP。�
 \item
   3.早鸟惩罚
 
-  最初官方为了鼓励Steem用户发现优秀文章，就设计了一个点赞文章越早，得到点赞收益越多的规则。这本身是个很好的规则，但很多用户为了利益钻空子，就制造了很多点赞机器人，可以在文章刚发出来时就点赞文章，获得最大的收益。机器人获得的收益多了，那么自然认真发现优秀文章的用户得到收益就少了。为了减轻机器人抢赞造成的坏处，官方便设计了一个惩罚机制，太早点赞一篇文章则你本该获得点赞收益就会分一些给作者。极端情况下，比如文章发表三分钟内点赞，那么你所有的收益的点赞收益都会交给作者。随着时间的延长则交给作者的比例减小。直到30分钟后，你就可以获得你所有的点赞收益。所以实际上你发表一篇文章，有可能所有收益都归你所有，只要为你点赞的人都在你文章发表三分钟之内点赞。
+  最初官方为了鼓励Steem用户发现优秀文章，就设计了一个点赞文章越早，得到点赞收益越多的规则。这本身是个很好的规则，但很多用户为了利益钻空子，就制造了很多点赞机器人，可以在文章刚发出来时就点赞文章，获得最大的收益。机器人获得的收益多了，那么自然认真发现优秀文章的用户得到收益就少了。为了减轻机器人抢赞造成的坏处，官方便设计了一个惩罚机制，太早点赞一篇文章则你本该获得点赞收益就会分一些给作者。极端情况下，比如文章发表一分钟内点赞，那么你所有的收益的点赞收益都会放回奖金池。随着时间的延长则返回奖金池的比例减小。直到15分钟后，你就可以获得你所有的点赞收益。所以实际上你发表一篇文章，不管点赞者什么时候点赞，作者都获得75\%收益。而点赞者如果在15分钟内点赞，他们的部分审查收益将放回奖金池。
 \item
   4.点赞的时机
 
@@ -1862,11 +2087,11 @@ SP非常的重要，日常的发帖或者直接购买都可以增加你的SP。�
 
   \begin{itemize}
   \item
-    一：3分钟之内不点赞
+    一：1分钟之内不点赞
   \item
-    二：30分钟后越早点赞越好
+    二：15分钟后越早点赞越好
   \item
-    三：3到30分钟之间任何时候点赞都可能得到最大收益，还是得具体情况具体分析。
+    三：7到15分钟之间任何时候点赞都可能得到最大收益，还是得具体情况具体分析。
   \end{itemize}
 
   不过话说回来，如您正在仔细研究这篇文章，您应该是个刚加入进来的新人，SP应该不多，任何时候点赞差别不会太大，所以还是随意就好。
@@ -2051,6 +2276,67 @@ SP非常的重要，日常的发帖或者直接购买都可以增加你的SP。�
   所以我们可以确定，只要1SBD的实际市场价格大于1美元，我们选择50\%/50\%分配方案就会比100\%分配方案更有优势。
 \end{itemize}
 
+\hypertarget{how-to-calculate-reward}{%
+\subsection[帖子收益的计算方式 ]{\texorpdfstring{帖子收益的计算方式 \footnote{作者：@ericet；原文链接：\url{https://steemit.com/cn/@ericet/35f52g}}}{帖子收益的计算方式 }}\label{how-to-calculate-reward}}
+
+帖子计算的公式
+\includegraphics{images/chapter_02_0/image.png}
+
+\includegraphics{images/chapter_02_0/image_1.png}
+
+第一组公式：
+\textbf{RS}: 帖子收益总和，以rshares为单位。
+\textbf{Rb（Reward Balance)}: 每年Steem通货膨胀所产生的STEEM，大概每3秒产生 1.668 STEEM 加到奖金池里
+\textbf{Rc（Recent Claims）}: 所有帖子回复还没有结算的收益总和。以Rshares为单位。
+
+第二组公式：
+\textbf{Psteem}：通过第一组公式得到的以Steem计价的帖子收入
+\textbf{Price} : STEEM的喂价（STEEM 3.5日的中间价）
+
+通过第二组公式就可以获得Psbd 以SBD计的帖子收益。
+
+看到公式是不是很抽象？举个例子解释一下吧。
+
+比如我的这篇帖子：\href{https://steemit.com/@ericet/partiko20-2mmhatnw}{https://steemit.com/\citet{ericet/partiko20-2mmhatnw}}
+显示的收益是\$0.99.
+现在我们开始计算这\$0.99是怎么来的。
+
+\begin{itemize}
+\tightlist
+\item
+  通过\href{https://steemd.com/@ericet/partiko20-2mmhatnw}{https://steemd.com/\citet{ericet/partiko20-2mmhatnw}} 获取帖子点赞的RS，总共：1,644,564,313,801
+\item
+  Rb: 847,366
+\item
+  Rc: 550,688,291B
+\item
+  通过www.steemd.com 获取STEEM喂价：\$0.39 然后套入公式后：
+\end{itemize}
+
+\begin{quote}
+Psbd = RSx(Rb/Rc)xPrice
+\end{quote}
+
+Psbd = 1,644,564,313,801 x (847,366/550,688,291,000,000,000) x 0.39
+Psbd = 0.987
+
+算出的收益为0.987 SBD，1SBD以1美元计，和帖子显示的\$0.99相符（四舍五入）
+
+读懂上面的公式对理解帖子的收益有很大的帮助。
+比如：
+
+\begin{itemize}
+\tightlist
+\item
+  帖子的收益受什么因素影响？
+\item
+  什么时候买赞比较合算？
+\item
+  币价低迷是不是写文章的好时机？
+\end{itemize}
+
+这些问题都可以通过上面的公式来解释。
+
 \section[关于带宽的一切 ]{\texorpdfstring{关于带宽的一切 \footnote{作者：@vickylin；编辑：@vickylin}}{关于带宽的一切 }}
 
 对于新人来说，在解决了设置个人信息问题，开始发帖和互动，最常遇到的一个问题就是：
@@ -2179,9 +2465,9 @@ steemit就是个小社会，自然也有各种糟心事。遇到经常发现莫�
 \item
   Voting Power：满格是100\%。当你的VP是100\%的时候，你用100\%的点赞比例对某帖子进行点赞时，不考虑到外在不可控因素，这样的点赞价值（vote value）是最高的。
 \item
-  早鸟惩罚：最初官方为了鼓励Steem用户发现优秀文章，就设计了一个点赞文章越早，得到点赞收益越多的规则，机器人就应运而生。为了减轻机器人抢赞造成的坏处，官方便设计了一个惩罚机制，太早点赞一篇文章则你本该获得点赞收益就会分一些给作者。极端情况下，比如文章发表三分钟内点赞，那么你所有的收益的点赞收益都会交给作者。随着时间的延长则交给作者的比例减小。直到30分钟后，你就可以获得你所有的点赞收益。所以实际上你发表一篇文章，有可能所有收益都归你所有，只要为你点赞的人都在你文章发表三分钟之内点赞。
+  早鸟惩罚：最初官方为了鼓励Steem用户发现优秀文章，就设计了一个点赞文章越早，得到点赞收益越多的规则。这本身是个很好的规则，但很多用户为了利益钻空子，就制造了很多点赞机器人，可以在文章刚发出来时就点赞文章，获得最大的收益。机器人获得的收益多了，那么自然认真发现优秀文章的用户得到收益就少了。为了减轻机器人抢赞造成的坏处，官方便设计了一个惩罚机制，太早点赞一篇文章则你本该获得点赞收益就会分一些给作者。极端情况下，比如文章发表一分钟内点赞，那么你所有的收益的点赞收益都会放回奖金池。随着时间的延长则返回奖金池的比例减小。直到15分钟后，你就可以获得你所有的点赞收益。所以实际上你发表一篇文章，不管点赞者什么时候点赞，作者都获得75\%收益。而点赞者如果在15分钟内点赞，他们的部分审查收益将放回奖金池。
 \item
-  点赞时机：考虑到早鸟惩罚，我们可以大致推测出3分钟之内不点赞，30分钟后越早点赞越好，3到30分钟之间任何时候点赞都可能得到最大收益，还是得具体情况具体分析。当然，如果你还在看这个章节，很可能你的有效SP还不算太高，那么遇到真心喜欢的文章，过了3分钟后就尽早点赞吧。
+  点赞时机：考虑到早鸟惩罚，我们可以大致推测出1分钟之内不点赞，15分钟后越早点赞越好，1到15分钟之间任何时候点赞都可能得到最大收益，还是得具体情况具体分析。当然，如果你还在看这个章节，很可能你的有效SP还不算太高，那么遇到真心喜欢的文章，过了1分钟后就尽早点赞吧。
 \item
   喂价和市场价
 \item
@@ -2530,7 +2816,7 @@ PS：海豚和鲸其实都属于哺乳动物，不是鱼。
 \begin{minipage}[t]{0.47\columnwidth}\raggedright
 \includegraphics{images/2-j7.png}\strut
 \end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\raggedright
-当你在浏览帖子时，你会发现在帖子右上角都会有一个小旗子，那就是所谓的``踩''（flag）。当你不认同他人帖子收益时，你就能使用此功能。打个比方，你发现一个人抄袭你的帖子，你就能使用这一个功能，并向有关当局举报此用户（ @cheetah 和 \href{images/chapter_02_0/@steemcleaners}{@steemcleaners}）。请千万记得，不要滥用这一个功能因为它会消耗你的点赞力量！\strut
+当你在浏览帖子时，你会发现在帖子右上角都会有一个小旗子，那就是所谓的``踩''（flag）。当你不认同他人帖子收益时，你就能使用此功能。打个比方，你发现一个人抄袭你的帖子，你就能使用这一个功能，并向有关当局举报此用户（ @cheetah 和 \href{https://busy.org/@steemcleaners}{@steemcleaners}）。请千万记得，不要滥用这一个功能因为它会消耗你的点赞力量！\strut
 \end{minipage}\tabularnewline
 \bottomrule
 \end{longtable}
@@ -7480,6 +7766,54 @@ Steemitworldmap除了配合你的旅游帖子和美照之外，发美食应该�
 
 在前两个上面分别填入你的用户名和发帖密码，然后在下面填入你愿意维持的最小的投票能量，当你的投票能量低于你设定的数值时，你就不会在进行投票，同样别人也不会给你投票。最后点击I'am sure就ok啦。
 
+\hypertarget{snax}{%
+\section[Snax ]{\texorpdfstring{Snax \footnote{作者:@jianan;编辑:@jianan;原文链接:\url{https://steemit.com/cn/@jianan/snax}}}{Snax }}\label{snax}}
+
+\includegraphics{images/chapter_09_0/snax.png}
+
+\hypertarget{snax}{%
+\subsection{给社交平台用户的一盒糖果（Snax）}\label{snax}}
+
+之前就有听Steem上的朋友说过Snax这一个区块链产品。Snax是很有意思的一个区块链项目，我把它看作是奖赏给社交平台用户的一种充满惊喜的糖果。
+
+正如电影《阿甘正传》中说的''Life was like a box of chocolate ,you never know what you're gonna get.``（生活就像一盒巧克力，你永远不知道下一颗会尝到什么味道。）
+
+Snax就是这样的一盒巧克力，它给活跃在各个社交平台上的用户，为其在平台的社交行为而提供一些Snax奖励。
+
+或者简单说有些类似Likecoin的Tips意思在里面。Snax的独特之处，在于它可以让内容社交平台上的用户，在不需要离开自己喜欢的平台的情况下获得SNAX的奖励。正因为这一点，Snax因此非常受用户欢迎。
+
+Snax目前支持Twitter和Steem，作为Steem的用户很乐意看见有区块链产品一开始就支持Steem平台。Snax项目才刚刚开始，相信Snax在未来也会支持更多的互联网社区平台，毕竟Twitter都支持了，Facebook、youtube、instagram甚至中文的微博还会远嘛。
+
+\includegraphics{images/chapter_09_0/snax2.png}
+
+\hypertarget{snax}{%
+\subsection{有关Snax的体验和奖励指标。}\label{snax}}
+
+关于Snax比较想说的一点是，它与其它产品体验的不同。
+
+Snax让人感到比较好的体验是，用户甚至不需要在Snax上创建帐户就能参与进来，等到你什么时候想要领取奖励时再去注册领取。用户根本就不需要离开原来的社区就能参与进来，获得这额外的糖果。
+
+Snax对用户来说是一种惊喜的糖果，对社交平台来说，充当的则是一个搭档的角色而非竞争对手。它是一种附加的餐后糕点。这一点使得用户使用的门槛降低下来，也不会去和社交平台争夺用户的注意力和时间。
+
+这是一种很轻的体验，就是说花费很低注意力的就能参与的产品体验。
+
+奖励的SNAX可以赠送给朋友，目前可通过Twitter或者Steem账户名发送。而关于SNAX代币的的获取，除了目前注册用户领取的50枚之外，还有两个方法。
+
+\begin{itemize}
+\item
+  1、一个是成为社交平台的内容作者，只要持续创作内容，获得粉丝的回复，点赞，转发等行为就能获得更多的奖励。
+\item
+  2、另一个是SNAX的出块奖励。Snax使用DPoS共识。Snax链的每个块都由21个块生产者验证产出。
+\end{itemize}
+
+对于普通用户来说，如果想获更多SNAX，只需要注册绑定成为作者，发布日常内容就有机会获得SNAX代币，比如成为Twitter的用户，或者Steem用户。在绑定验证之后就能参与进来。
+
+Snax是通过一个叫做Attention Rate（影响力？）的指标来进行SNAX代币的奖励发放。
+
+从目前得知的有关SNAX奖励的指标中，主要有评论数量，投票数，被关注的粉丝数等，据说跟SteemAuto的指标类似。
+
+也就是所你发的帖子越受欢迎，被越多人点赞，转发，评论就有可能获得更多的SNAX奖励。
+
 \section[延伸阅读：授权与安全 ]{\texorpdfstring{延伸阅读：授权与安全 \footnote{作者:@rileyge;@skenan;编辑:@maiyude;原文链接:\url{https://steemit.com/cn/@rileyge/steemconnect-v2}}}{延伸阅读：授权与安全 }}
 
 \begin{itemize}
@@ -8601,88 +8935,6 @@ steem上各种各样有趣的应用，将会大大的方便我们的生活！
 
 \hypertarget{bqtz}{%
 \chapter{币圈投资}\label{bqtz}}
-
-\hypertarget{nbc-}{%
-\section[NBC 新手币 ]{\texorpdfstring{NBC 新手币 \footnote{作者:@ericet;编辑:@minloulou;原文链接:\url{https://steempeak.com/cn/@ericet/steem-enginenbc-8gramkt1en}}}{NBC 新手币 }}\label{nbc-}}
-
-NBC是什麼
-
-NBC是\href{https://steempeak.com/@team-cn}{@team-cn}在steem-engine上发的一款代币。目的是取代对SBI（Steem Basic Income)的依赖，奖励社区积极分子，好文作者和在背后努力的各种编辑（好声音，steem手册，寻宝团，飞鸽传书等）
-
-目前市场价格1 NBC = 1 STEEM，在市面上流通的NBC数量大概5000。
-
-持有NBC的好处
-
-\begin{itemize}
-\item
-  每日点赞，持有新手币者，将会获得\href{https://steempeak.com/@team-cn}{@team-cn}每日一帖的点赞； 目前\href{https://steempeak.com/@team-cn}{@team-cn}账号大概有20000SP, 持有2 NBC每日会获得2\% team-cn点赞（相当于400sp），如果把`cn' 作为首标签，还可以额外获得2\%点赞(相当于800sp）。
-\item
-  收益分红，每日按锁仓币的比重，分享 \href{https://steempeak.com/@team-cn}{@team-cn}的SBD/STEEM收益分红； \href{https://steempeak.com/@team-cn}{@team-cn}的收益主要来自飞鸽传书50\%收益，寻宝团50\%收益，小卖部30\%收益，\href{https://steempeak.com/@teamcn-fund}{@teamcn-fund}每日发帖收益，还有少量来自\href{https://steempeak.com/@team-cn}{@team-cn}发帖收益。 由于收益时高时低，并不能准确估计年回报率是多少。但是超过30\%年利率是肯定的。 以NBC的长期支持者嘉楠哥\href{https://steempeak.com/@jianan}{@jianan}的NBC持有算一下年回报率：
-\end{itemize}
-
-\includegraphics{images/chapter_14_0/ZOiFJBz.png}
-
-嘉楠哥持有300 NBC 2个月，总共获得0.006 STEEM和9.108 SBD，按照目前1 SBD = 2.5 STEEM计算，2个月获得22.776 STEEM分红。一年的年利率差不多45.55\%。还没算上发帖获得的点赞。
-
-目前从原持有NBC就可以获得STEEM/SBD分红改成了只有锁仓NBC才会有分红后，锁仓NBC的用户的年利率将大大提高。
-
-比如今天嘉楠哥获得0.33 SBD,换算成steem 是0.825 steem。一年回报率达到了100\%！（需要更多数据支持，但是超过50\%年回报率是妥妥的！）
-
-\begin{itemize}
-\tightlist
-\item
-  容易变现，不需如SP般等待13周的power down周期； 很多项目需要把steem power up后才能通过代理获得每日点赞/分红。如果你想提现走人，需要5日把SP抽回，并且13周时间全部power down。这提现的周期实在有点太长了。 但是如果你持有NBC，你同样可以获得每日点赞/分红。如果你想提现走人，把手上的NBC通过steem-engine出售换成steem就可以提款走人了。
-\item
-  容易转换币权，可透过交易平台 Steem-Engine.com转赠他人。 一般如果你想把SP当成礼物送给他人，需要代理SP给他。这代理不是永久的，如果对方把SP收回，你的SP就没了。 如果持有NBC，你可以把NBC作为一个奖励或者礼物永久的送给他人。
-\item
-  持有NBC获得\href{https://steempeak.com/@sct.teamcn}{@sct.teamcn}点赞
-\end{itemize}
-
-\href{https://steempeak.com/@sct.teamcn}{@sct.teamcn}这个账号目前有928 staked SCT. 专门用于给持有NBC的用户的sct帖子点赞。会不断增加锁仓SCT的数量来提高点赞。算是给NBC持有者的额外福利。
-
-NBC的价值在哪里？
-
-NBC的价值来自\href{https://steempeak.com/@team-cn}{@team-cn}. 只要\href{https://steempeak.com/@team-cn}{@team-cn}继续下去，NBC就会有价值。
-
-目前支撑NBC的价值的是来自各种\href{https://steempeak.com/@team-cn}{@team-cn}的基础设施，比如\href{https://steempeak.com/@cn-curation}{@cn-curation}，\href{https://steempeak.com/@cn-activity}{@cn-activity}，\href{https://steempeak.com/@teamcn-shop}{@teamcn-shop}，\href{https://steempeak.com/@teamcn-fund}{@teamcn-fund}。
-
-\href{https://steempeak.com/@team-cn}{@team-cn} 也没有跑路的风险，因为这是个公益项目，没有盈利也没有亏损。获得的收益也全部回报给社区和持有NBC者。
-
-怎么获得NBC？
-
-\begin{itemize}
-\tightlist
-\item
-  通过steem-engine市场购买 目前有少量的NBC可以在市场上购买，最低卖价是1.04 STEEM。 购买链接：\url{https://steem-engine.com/?p=market\&t=NBC}
-\end{itemize}
-
-\includegraphics{images/chapter_14_0/rS3MtvD.png}
-
-\begin{itemize}
-\tightlist
-\item
-  通过代理SP给\href{https://steempeak.com/@team-cn}{@team-cn}获得 代理SP给team-cn除了可以获得每日点赞外，还可以获得每日0.05\%的NBC利息（一年20\%复利）
-  使用下面链接代理给\href{https://steempeak.com/@team-cn}{@team-cn}: \href{https://steemconnect.com/sign/delegateVestingShares?delegatee=team-cn\&vesting_shares=10\%20SP}{10SP}, \href{https://steemconnect.com/sign/delegateVestingShares?delegatee=team-cn\&vesting_shares=20\%20SP}{20SP}, \href{https://steemconnect.com/sign/delegateVestingShares?delegatee=team-cn\&vesting_shares=50\%20SP}{50SP}, \href{https://steemconnect.com/sign/delegateVestingShares?delegatee=team-cn\&vesting_shares=100\%20SP}{100SP}, \href{https://steemconnect.com/sign/delegateVestingShares?delegatee=team-cn\&vesting_shares=200\%20SP}{200SP}, \href{https://steemconnect.com/sign/delegateVestingShares?delegatee=team-cn\&vesting_shares=300\%20SP}{300SP}, \href{https://steemconnect.com/sign/delegateVestingShares?delegatee=team-cn\&vesting_shares=400\%20SP}{400SP}, \href{https://steemconnect.com/sign/delegateVestingShares?delegatee=team-cn\&vesting_shares=500\%20SP}{500SP}, \href{https://steemconnect.com/sign/delegateVestingShares?delegatee=team-cn\&vesting_shares=1000\%20SP}{1,000SP}, \href{https://steemconnect.com/sign/delegateVestingShares?delegatee=team-cn\&vesting_shares=5000\%20SP}{5,000SP}, \href{https://steembottracker.com/delegation.html?delegatee=team-cn}{其他数量}
-\item
-  通过参与社区建设，活动，写好文获得
-\end{itemize}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  参与不同社区活动活动，比如完成5期\href{https://steempeak.com/@team-cn}{@team-cn}每周一发布的作业就可以获得1 NBC。参与好声音，参与steem手册编辑都可以获得NBC奖励。
-\item
-  飞鸽传书每天会选2篇好文给予点赞并且每个作者获得1 NBC
-\item
-  担任好声音，寻宝团，steem手册，飞鸽传书的编辑获得NBC
-\end{enumerate}
-
-NBC是社区的良心项目，设计的本意是让\href{https://steempeak.com/@team-cn}{@team-cn}可以有更多的SP支持一些社区项目，并且让好文作者，参与社区建设的人获得一些回报。大家可以放心购买并持有。
-
-想了解更多，可以看:
-- \href{https://steempeak.com/cn/@team-cn/newbies-coin-nbc-white-paper-version-1-0-nbc-1-0}{NBC的白皮书}
-- \href{https://steempeak.com/@team-cn/nbc-201964nbcthetermschangeofnbcdailydividends-82gxnr3ys4}{【新手币 NBC公告 - 2019年6月4日】有关新手币 NBC 分红条款变更/The Terms Change of NBC Daily Dividends ---}
 
 \hypertarget{zt_steem_sj}{%
 \chapter[专题：Steem 十讲]{\texorpdfstring{专题：Steem 十讲\footnote{作者：@deanliu，编辑：@dapeng，校对：@meixia}}{专题：Steem 十讲}}\label{zt_steem_sj}}
